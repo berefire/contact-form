@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="google" content="notranslate">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="author" content="Berefire">
+  <meta name="description" content="Accessible Contact Form solution built semantic HTML, CSS and responsive layouts.">
+  <meta name="keywords"
+    content="Berefire, Frontend Mentor, contact form, HTML, CSS, JavaScript, Accessibility, Responsive Design">
+
+  <meta property="og:title" content="Berefire | Frontend Mentor Accessible Contact Form Solution">
+  <meta property="og:description"
+    content="Accessible Contact Form solution built semantic HTML, CSS and responsive layouts.">
+  <meta property="og:url" content="https://berefire.github.io/contact-form">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Berefire">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+
+  <title> Berefire | Frontend Mentor Accessible Contact Form Solution </title>
+
+  <script src="./src/js/main.js" defer type="module"></script>
+
+</head>
+
+<body>
+  <main>
+    <form novalidate>
+      <h1>Contact Us</h1>
+      <div>
+        <label for="first-name">First Name
+          <span class="required" aria-hidden="true">*</span>
+        </label>
+        <input type="text" id="first-name" name="first-name" aria-describedby="desc_name" autocomplete="given-name"
+          required>
+        <span id="desc_name" class="error-message">This field is required</span>
+      </div>
+
+
+
+      <div>
+        <label for="last-name">Last Name
+          <span class="required" aria-hidden="true">*</span>
+        </label>
+        <input type="text" id="last-name" name="last-name" aria-describedby="desc_last-name" autocomplete="family-name"
+          required>
+        <span id="desc_last-name" class="error-message">This field is required</span>
+      </div>
+
+
+      <div>
+        <label for="email">Email Address
+          <span class="required" aria-hidden="true">*</span>
+        </label>
+        <input type="email" id="email" name="email" aria-describedby="desc_email error_email" autocomplete="email"
+          required>
+        <span id="error_email" class="error-message">Please enter a valid email address</span>
+        <span id="desc_email" class="error-message"> This field is required </span>
+      </div>
+
+
+      <div>
+        <fieldset>
+          <legend>Query Type</legend>
+          <input type="radio" id="general-enquiry" name="query-type" value="general-enquiry"
+            aria-describedby="desc_query-type" required>
+          <label for="general-enquiry">General Enquiry</label>
+          <input type="radio" id="support-request" name="query-type" value="support-request"
+            aria-describedby="desc_query-type">
+          <label for="support-request">Support Request</label>
+        </fieldset>
+        <span id="desc_query-type" class="error-message">Please select a query type</span>
+      </div>
+
+
+      <div>
+        <label for="message">Message
+          <span class="required" aria-hidden="true">*</span>
+        </label>
+        <textarea id="message" name="message" rows="5" aria-describedby="desc_message" required></textarea>
+        <span id="desc_message" class="error-message">This field is required</span>
+      </div>
+
+      <div>
+        <label for="consent">
+          <input type="checkbox" id="consent" name="consent" aria-describedby="desc_consent" required>
+          I consent to being contacted by the team <span>
+            <span class="required" aria-hidden="true">*</span>
+          </span>
+        </label>
+        <span id="desc_consent" class="error-message">To submit this form, please consent to being contacted</span>
+      </div>
+
+
+      <button type="submit">Submit</button>
+
+    </form>
+
+
+    <section aria-labelledby="message-sent-title" hidden tabindex="-1" role="status" aria-live="polite">
+      <h2 id="message-sent-title">Message Sent!</h2>
+      <p>Thanks for completing the form. We'll be in touch soon!</p>
+    </section>
+  </main>
+
+  <footer class="attribution">
+    Challenge by <a class="link" href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+      rel="noopener noreferrer" aria-label="Frontend Mentor (opens in a new tab)">Frontend Mentor <span
+        aria-hidden="true" class="external-icon">🔗</span></a>.
+    Coded by <a class="link" target="_blank" rel="noopener noreferrer" aria-label="Author (opens in a new tab)"
+      href="#">Berefire</a>.
+  </footer>
+</body>
+
+</html>
