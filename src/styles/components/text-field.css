@@ -16,4 +16,12 @@
         font-size: var(--fs-error-message);
         line-height: var(--lh-error-message);
     }
+
+    .input-field {
+        border: 0.0625em solid var(--bg-border-input);
+        padding-inline: var(--padding-inline-input-field);
+        padding-block: var(--padding-block-input-field);
+        border-radius: var(--spacing-100);
+    }
+
 }

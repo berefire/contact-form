@@ -1,0 +1,15 @@
+@layer states {
+    .radio-icon:checked {
+        background-image: url("../../assets/images/icon-radio-selected.svg");
+        border: none;
+    }
+
+    .radio-option--visual:hover {
+        border-color: var(--bg-border-radio-selected);
+    }
+
+    .radio-text:has(.radio-icon:checked) .radio-option--visual {
+        border-color: var(--bg-border-radio-selected);
+        background-color: var(--bg-radio-selected);
+    }
+}

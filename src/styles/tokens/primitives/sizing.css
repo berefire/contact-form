@@ -1,5 +1,6 @@
 @layer tokens.primitives{
     :root {
         --sizing-343: calc( 343 / var(--base) * 1rem);
+        --sizing-24: var(--spacing-300);
     }
 }

@@ -65,13 +65,12 @@
 
           <div class="cluster--xs">
             <fieldset class="radio-selection">
-              <legend>Query Type</legend>
-              <input type="radio" id="general-enquiry" name="query-type" value="general-enquiry"
-                aria-describedby="desc_query-type" required>
-              <label for="general-enquiry" class="radio-text">General Enquiry</label>
-              <input type="radio" id="support-request" name="query-type" value="support-request"
-                aria-describedby="desc_query-type">
-              <label for="support-request" class="radio-text">Support Request</label>
+              <legend class="title-input">Query Type <span class="required" aria-hidden="true">*</span></legend>
+            
+              <label for="general-enquiry" class="radio-text"><span class="radio-option--visual"><input type="radio" id="general-enquiry" name="query-type" value="general-enquiry" class="radio-icon"
+                aria-describedby="desc_query-type" required>General Enquiry</span></label>
+              <label for="support-request" class="radio-text"><span class="radio-option--visual"><input type="radio" id="support-request" name="query-type" value="support-request" class="radio-icon"
+                aria-describedby="desc_query-type" required>Support Request</span></label>
             </fieldset>
             <span id="desc_query-type" class="error-message">Please select a query type</span>
           </div>

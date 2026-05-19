@@ -6,10 +6,13 @@
         --fs-title-input: var(--fs-body-sm);
         --fs-error-message: var(--fs-body-sm);
         --fs-required: var(--fs-body-sm);
+        --fs-radio-option: var(--fs-body-md);
 
         --lh-title-input: var(--lh-body);
         --lh-error-message: var(--lh-body);
         --lh-required: var(--lh-body);
+        --lh-radio-option: var(--lh-body);
+
 
     }
 }

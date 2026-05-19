@@ -1,0 +1,5 @@
+@layer states {
+    .input-field:hover {
+        border-color: var(--bg-border-input-hover);
+    }
+}

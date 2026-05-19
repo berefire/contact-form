@@ -1,0 +1,51 @@
+@layer components {
+    .radio-icon {
+        border: 0.0625em solid var(--bg-border-radio);
+        inline-size: var(--sizing-radio);
+        block-size: var(--sizing-radio);
+        border-radius: 50%;
+        display: grid;
+        place-content: center;
+
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+
+    .radio-option--visual {
+        inline-size: 100%;
+        display: inline-flex;
+        flex-direction: row;
+        align-items: center;
+        gap: var(--gap-radio-option);
+        cursor: pointer;
+        
+        
+        border: 0.0625em solid var(--bg-border-radio);
+        border-radius: var(--spacing-100);
+        padding-inline: var(--padding-inline-radio-option);
+        padding-block: var(--padding-block-radio-option);
+        
+    }
+
+    .radio-selection {
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap-radio-selection);
+    }
+
+    .radio-text {
+        font-size: var(--fs-radio-option);
+        color: var(--fc-radio-option);
+        line-height: var(--lh-radio-option);
+    }
+
+
+
+    .radio-selection .title-input {
+        padding-block-end: var(--gap-radio-selection);
+    }
+
+    
+
+}
