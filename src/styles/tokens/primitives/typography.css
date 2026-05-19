@@ -1,0 +1,17 @@
+@layer tokens.primitives{
+    :root {
+
+        --karla-family: 'Karla', sans-serif;
+
+        --fs-heading: calc( 32 / var(--base) * 1rem);
+        --fs-body-md: calc( 18 / var(--base) * 1rem);
+        --fs-body-sm: calc( 16 / var(--base) * 1rem);
+
+        --lh-heading: 1;
+        --lh-body: 1.5;
+
+        --font-weight-regular: 400;
+        --font-weight-bold: 700;
+
+    }
+}

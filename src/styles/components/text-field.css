@@ -1,0 +1,19 @@
+@layer components {
+    .title-input {
+        font-size: var(--fs-title-input);
+        color: var(--fc-title-input);
+        line-height: var(--lh-title-input);
+    }
+    
+    .required {
+        color: var(--fc-required);
+        font-size: var(--fs-required);
+        line-height: var(--lh-required);
+    }
+
+    .error-message {
+        color: var(--fc-error-message);
+        font-size: var(--fs-error-message);
+        line-height: var(--lh-error-message);
+    }
+}

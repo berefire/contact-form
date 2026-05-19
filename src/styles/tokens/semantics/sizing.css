@@ -1,0 +1,5 @@
+@layer tokens.semantics{
+    :root {
+        --sizing-contact-form: var(--sizing-343);
+    }
+}

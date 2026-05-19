@@ -1,0 +1,6 @@
+@layer layout {
+    .box {
+        padding-inline: var(--padding-inline-box);
+        padding-block: var(--padding-block-box);
+    }
+}

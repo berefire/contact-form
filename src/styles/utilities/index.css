@@ -1,3 +1,2 @@
-@layer utilities;
 
-@import "@utilities/link.css";
+@import "@utilities/link.css" layer(utilities);

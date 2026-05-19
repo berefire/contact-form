@@ -1,5 +1,7 @@
 @layer base {
   html {
+    font-family: var(--font-family-base);
+    background-color: var(--bg-primary);
     -webkit-text-size-adjust: 100%;
   }
 

@@ -1,0 +1,20 @@
+@layer tokens.semantics {
+    :root {
+
+        --bg-primary: var(--green-200);
+        --bg-contact-form: var(--white);
+        --bg-input: var(--white);
+
+        --bg-border-input: var(--grey-500);
+        --bg-border-input-selected: var(--green-600);
+
+        --fc-title: var(--grey-900);
+        --fc-title-input: var(--grey-900);
+
+        --fc-required: var(--green-600);
+        --fc-error-message: var(--red);
+
+        --bg-button: var(--green-600);
+      
+    }
+}

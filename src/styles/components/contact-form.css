@@ -1,0 +1,7 @@
+@layer components {
+    .contact-form {
+        max-inline-size: var(--sizing-contact-form);
+        background-color: var(--bg-contact-form);
+        border-radius: var(--spacing-200);
+    }
+}

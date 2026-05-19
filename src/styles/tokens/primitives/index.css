@@ -1,0 +1,5 @@
+
+@import "@primitives/colors.css" layer(tokens.primitives);
+@import "@primitives/typography.css" layer(tokens.primitives);
+@import "@primitives/spacing.css" layer(tokens.primitives);
+@import "@primitives/sizing.css" layer(tokens.primitives);

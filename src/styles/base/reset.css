@@ -1,6 +1,6 @@
 /* A modified version of my "modern reset" https://github.com/Andy-set-studio/modern-css-reset */
 
-@layer base {
+@layer reset {
   /* Box sizing rules */
   *,
   *::before,
@@ -49,7 +49,7 @@
   }
 
   /* Inherit fonts for inputs and buttons */
-  button {
+  button, input {
     font: inherit;
     padding: 0;
     margin: 0;
