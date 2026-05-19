@@ -1,0 +1,30 @@
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  html,
+  body {
+    min-block-size: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  button {
+    display: block;
+    cursor: pointer;
+  }
+
+  @supports (min-block-size: 100dvh) {
+    html,
+    body {
+      min-block-size: 100dvh;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    input {
+      transition: none;
+    }
+  }
+}
