@@ -2,4 +2,9 @@
     .input-field:hover {
         border-color: var(--bg-border-input-hover);
     }
+
+    .input-field:focus-visible, .input-field:focus {
+        outline: 0.125em solid var(--bg-border-input-focus);
+        border-color: var(--bg-border-input-focus);
+    }
 }
