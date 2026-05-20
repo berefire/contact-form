@@ -5,6 +5,7 @@
         --bg-contact-form: var(--white);
         --bg-input: var(--white);
         --bg-submit-btn: var(--green-600);
+        --bg-submit-btn-hover: var(--dark-green);
         --bg-message-sent: var(--grey-900);
         
 

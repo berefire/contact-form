@@ -1,20 +1,21 @@
 @layer states {
-    .radio-icon:checked {
-        background-image: url("../../assets/images/icon-radio-selected.svg");
-        border: none;
-    }
+  .radio-icon:checked {
+    background-image: url("../../assets/images/icon-radio-selected.svg");
+    border: none;
+    background-size: contain;
+  }
 
-    .radio-option--visual:hover {
-        border-color: var(--bg-border-radio-selected);
-    }
+  .radio-option--visual:hover {
+    border: 0.125em solid var(--bg-border-radio-selected);
+  }
 
-    .radio-text:has(.radio-icon:checked) .radio-option--visual {
-        border-color: var(--bg-border-radio-selected);
-        background-color: var(--bg-radio-selected);
-    }
+  .radio-text:has(.radio-icon:checked) .radio-option--visual {
+    border: 0.125em solid var(--bg-border-radio-selected);
+    background-color: var(--bg-radio-selected);
+  }
 
-    .radio-icon:focus-visible {
-        outline: 0.125em solid var(--bg-border-radio-selected) inset;
-        outline-offset: 0.125em;
-    }   
+  .radio-icon:focus-visible {
+    outline: none;
+    box-shadow: inset 0 0 0 0.125em var(--bg-border-radio-selected);
+  }
 }

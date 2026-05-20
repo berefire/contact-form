@@ -17,22 +17,11 @@
     padding-block: var(--padding-block-input-field);
     border-radius: var(--spacing-100);
     outline: none;
-    background-color: var(--bg-input-field);
+    background-color: var(--bg-input);
     color: var(--fc-title-input);
     font-size: var(--fs-input-field);
     line-height: var(--lh-input-field);
     font-weight: var(--fw-regular);
-  }
-
-  .input-field:-webkit-autofill,
-  .input-field:-webkit-autofill:hover,
-  .input-field:-webkit-autofill:focus {
-    -webkit-box-shadow: 0 0 0 62.5rem var(--bg-input) inset;
-    -webkit-text-fill-color: var(--fc-title-input);
-  }
-
-  .input-field:focus {
-    border-color: var(--bg-border-input-focus);
   }
 
   .input-field.is-invalid {

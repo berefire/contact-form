@@ -6,5 +6,6 @@
         --green-600: hsl(169, 82%, 27%);
         --green-200: hsl(148, 38%, 91%);
         --red: hsl(0, 66%, 54%);
+        --dark-green: color-mix(in srgb, black 50%, var(--green-600));
     }
 }

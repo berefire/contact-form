@@ -4,7 +4,7 @@
     }
 
     .submit-btn:focus-visible {
-        outline: 0.125em solid var(--bg-submit-btn);
+        outline: 0.125em solid var(--bg-submit-btn-hover);
         outline-offset: 0.125em;
     }
 }
