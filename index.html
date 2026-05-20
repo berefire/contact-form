@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="google" content="notranslate">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="author" content="Berefire">
+  <meta name="description" content="Accessible Contact Form solution built semantic HTML, CSS and responsive layouts.">
+  <meta name="keywords"
+    content="Berefire, Frontend Mentor, contact form, HTML, CSS, JavaScript, Accessibility, Responsive Design">
+
+  <meta property="og:title" content="Berefire | Frontend Mentor Accessible Contact Form Solution">
+  <meta property="og:description"
+    content="Accessible Contact Form solution built semantic HTML, CSS and responsive layouts.">
+  <meta property="og:url" content="https://berefire.github.io/contact-form">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Berefire">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/contact-form/images/favicon-32x32.png">
+
+  <title> Berefire | Frontend Mentor Accessible Contact Form Solution </title>
+
+
+  <script type="module" crossorigin src="/contact-form/assets/index-ydZWs-sa.js"></script>
+  <link rel="stylesheet" crossorigin href="/contact-form/assets/index-UXVPVHoC.css">
+</head>
+
+<body>
+  <main class="cover">
+    <form class="contact-form box cluster--lg" novalidate>
+      <div class="cluster--md">
+        <h1 class="title-form">Contact Us</h1>
+
+        <div class="cluster--sm">
+          <div class="cluster--xs-sm">
+            <div class="cluster--xs">
+              <label for="first-name" class="title-input">First Name
+                <span class="required" aria-hidden="true">*</span>
+              </label>
+              <input type="text" id="first-name" name="first-name" aria-describedby="desc_name"
+                autocomplete="given-name" class="input-field" required>
+              <span id="desc_name" class="error-message" hidden role="alert"></span>
+            </div>
+
+            <div class="cluster--xs">
+              <label for="last-name" class="title-input">Last Name
+                <span class="required" aria-hidden="true">*</span>
+              </label>
+              <input type="text" id="last-name" name="last-name" aria-describedby="desc_last-name"
+                autocomplete="family-name" class="input-field" required>
+              <span id="desc_last-name" class="error-message" hidden role="alert"></span>
+            </div>
+          </div>
+
+          <div class="cluster--xs">
+            <label for="email" class="title-input">Email Address
+              <span class="required" aria-hidden="true">*</span>
+            </label>
+            <input type="email" id="email" name="email" aria-describedby="error_email" autocomplete="email"
+              class="input-field" required>
+            <span id="error_email" class="error-message" hidden role="alert"></span>
+          </div>
+
+          <div class="cluster--xs">
+            <fieldset class="radio-selection">
+              <legend class="title-input">Query Type <span class="required" aria-hidden="true">*</span></legend>
+
+              <label for="general-enquiry" class="radio-text"><span class="radio-option--visual"><input type="radio"
+                    id="general-enquiry" name="query-type" value="general-enquiry" class="radio-icon"
+                    aria-describedby="desc_query-type" required>General Enquiry</span></label>
+              <label for="support-request" class="radio-text"><span class="radio-option--visual"><input type="radio"
+                    id="support-request" name="query-type" value="support-request" class="radio-icon"
+                    aria-describedby="desc_query-type" required>Support Request</span></label>
+            </fieldset>
+            <span id="desc_query-type" class="error-message" hidden role="alert"></span>
+          </div>
+
+
+          <div class="cluster--xs">
+            <label for="message" class="title-input">Message
+              <span class="required" aria-hidden="true">*</span>
+            </label>
+            <textarea id="message" name="message" aria-describedby="desc_message" required
+              class="input-field size-message"></textarea>
+            <span id="desc_message" class="error-message" hidden role="alert"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cluster--xs">
+        <label for="consent" class="checkbox-label">
+          <input type="checkbox" id="consent" name="consent" aria-describedby="desc_consent" required
+            class="checkbox-input"><span class="text-checkbox">I consent to being contacted by the team <span
+              class="required" aria-hidden="true">*</span></span>
+
+        </label>
+        <span id="desc_consent" class="error-message" hidden role="alert"></span>
+      </div>
+
+      <button type="submit" class="submit-btn">Submit</button>
+
+    </form>
+
+
+    <section aria-labelledby="message-sent-title" role="status" aria-live="polite" class="message-section cluster--xs box--md" hidden>
+      <div class="cluster">
+        <span class="icon-circle" aria-hidden="true"></span>
+        <h2 id="message-sent-title" class="title-message">Message Sent!</h2>
+      </div>
+
+      <p class="text-message">Thanks for completing the form. We'll be in touch soon!</p>
+    </section>
+  </main>
+
+  <footer class="attribution">
+    Challenge by <a class="link" href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+      rel="noopener noreferrer" aria-label="Frontend Mentor (opens in a new tab)">Frontend Mentor <span
+        aria-hidden="true" class="external-icon">🔗</span></a>.
+    Coded by <a class="link" target="_blank" rel="noopener noreferrer" aria-label="Author (opens in a new tab)"
+      href="#">Berefire</a>.
+  </footer>
+</body>
+
+</html>
