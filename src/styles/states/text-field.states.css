@@ -3,7 +3,12 @@
         border-color: var(--bg-border-input-hover);
     }
 
-    .input-field:focus-visible, .input-field:focus {
+    .input-field:focus {
         border-color: var(--bg-border-input-focus);
+    }
+
+    .input-field:focus-visible {
+        outline: 0.125em solid var(--bg-border-input-focus);
+        outline-offset: 0.125em;
     }
 }

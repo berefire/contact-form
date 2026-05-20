@@ -3,4 +3,9 @@
         background-image: url("../../assets/images/icon-checkbox-check.svg");
         border: none;
     }
+
+    .checkbox-input:focus-visible {
+        outline: 0.125em solid var(--bg-border-checkbox-selected);
+        outline-offset: 0.125em;
+    }
 }

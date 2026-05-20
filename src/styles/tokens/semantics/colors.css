@@ -18,6 +18,8 @@
         --bg-border-radio-selected: var(--green-600);
         --bg-radio-selected: var(--green-200);
 
+        --bg-border-checkbox-selected: var(--green-600);
+
         --fc-title: var(--grey-900);
         --fc-title-input: var(--grey-900);
         --fc-radio-option: var(--grey-900);
