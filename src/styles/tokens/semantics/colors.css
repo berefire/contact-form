@@ -10,6 +10,7 @@
         --bg-border-input: var(--grey-500);
         --bg-border-input-hover: var(--green-600);
         --bg-border-input-focus: var(--green-600);
+        --bg-border-input-error: var(--red);
 
         --bg-border-radio: var(--grey-500);
         --bg-border-radio-selected: var(--green-600);

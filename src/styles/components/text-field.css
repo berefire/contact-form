@@ -11,13 +11,6 @@
         line-height: var(--lh-required);
     }
 
-    .error-message {
-        color: var(--fc-error-message);
-        font-size: var(--fs-error-message);
-        line-height: var(--lh-error-message);
-        font-weight: var(--fw-regular);
-    }
-
     .input-field {
         border: 0.0625em solid var(--bg-border-input);
         padding-inline: var(--padding-inline-input-field);
@@ -28,6 +21,17 @@
         color: var(--fc-title-input);
         font-size: var(--fs-input-field);
         line-height: var(--lh-input-field);
+        font-weight: var(--fw-regular);
+    }
+
+    .input-field.is-invalid {
+        border-color: var(--bg-border-input-error);
+    }
+
+    .error-message {
+        color: var(--fc-error-message);
+        font-size: var(--fs-error-message);
+        line-height: var(--lh-error-message);
         font-weight: var(--fw-regular);
     }
 
