@@ -11,7 +11,8 @@ const selectors = {
     messageInputId: "#message",
     messageError: "#desc_message",
     consentCheckbox: "#consent",
-    consentError: "#desc_consent"
+    consentError: "#desc_consent",
+    messageToast: ".message-section"
 };
 
 
@@ -47,7 +48,8 @@ export function initDOMElements() {
         messageInput: document.querySelector(selectors.messageInputId),
         messageError: document.querySelector(selectors.messageError),
         consentCheckbox: document.querySelector(selectors.consentCheckbox),
-        consentError: document.querySelector(selectors.consentError)
+        consentError: document.querySelector(selectors.consentError),
+        messageToast: document.querySelector(selectors.messageToast)
     };
 
     Object.entries(DOM).forEach(([key, element]) => {

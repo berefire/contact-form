@@ -5,5 +5,5 @@ import { handleSubmit } from "./events.js";
 export function initContactForm(DOM) {
     const formFields = createFormFields(DOM);
 
-    addSafeListener(DOM.contactForm, "submit", event => handleSubmit(event, formFields), "contact form submit");
+    addSafeListener(DOM.contactForm, "submit", event => handleSubmit(event, formFields, DOM.messageToast), "contact form submit");
 }
