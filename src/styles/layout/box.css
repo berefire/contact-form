@@ -3,4 +3,9 @@
         padding-inline: var(--padding-inline-box);
         padding-block: var(--padding-block-box);
     }
+
+    .box--md {
+        padding-inline: var(--padding-inline-box-md);
+        padding-block: var(--padding-block-box-md);
+    }
 }

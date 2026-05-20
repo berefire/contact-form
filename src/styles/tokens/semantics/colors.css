@@ -5,12 +5,14 @@
         --bg-contact-form: var(--white);
         --bg-input: var(--white);
         --bg-submit-btn: var(--green-600);
+        --bg-message-sent: var(--grey-900);
         
 
         --bg-border-input: var(--grey-500);
         --bg-border-input-hover: var(--green-600);
         --bg-border-input-focus: var(--green-600);
         --bg-border-input-error: var(--red);
+        --bg-input-selected: var(--green-200);
 
         --bg-border-radio: var(--grey-500);
         --bg-border-radio-selected: var(--green-600);
@@ -21,6 +23,8 @@
         --fc-radio-option: var(--grey-900);
         --fc-checkbox: var(--grey-900);
         --fc-submit-btn: var(--white);
+        --fc-title-message-sent: var(--white);
+        --fc-text-message-sent: var(--green-200);
 
         --fc-required: var(--green-600);
         --fc-error-message: var(--red);

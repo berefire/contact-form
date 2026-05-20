@@ -1,4 +1,11 @@
 @layer layout {
+    .cluster {
+        display: flex;
+        flex-direction: row;
+        gap: var(--gap-cluster);
+        align-items: center;
+    }
+
     .cluster--md  {
         display: flex;
         flex-direction: column;

@@ -1,42 +1,52 @@
 @layer components {
-    .title-input {
-        font-size: var(--fs-title-input);
-        color: var(--fc-title-input);
-        line-height: var(--lh-title-input);
-    }
-    
-    .required {
-        color: var(--fc-required);
-        font-size: var(--fs-required);
-        line-height: var(--lh-required);
-    }
+  .title-input {
+    font-size: var(--fs-title-input);
+    color: var(--fc-title-input);
+    line-height: var(--lh-title-input);
+  }
 
-    .input-field {
-        border: 0.0625em solid var(--bg-border-input);
-        padding-inline: var(--padding-inline-input-field);
-        padding-block: var(--padding-block-input-field);
-        border-radius: var(--spacing-100);
-        outline: none;
+  .required {
+    color: var(--fc-required);
+    font-size: var(--fs-required);
+    line-height: var(--lh-required);
+  }
 
-        color: var(--fc-title-input);
-        font-size: var(--fs-input-field);
-        line-height: var(--lh-input-field);
-        font-weight: var(--fw-regular);
-    }
+  .input-field {
+    border: 0.0625em solid var(--bg-border-input);
+    padding-inline: var(--padding-inline-input-field);
+    padding-block: var(--padding-block-input-field);
+    border-radius: var(--spacing-100);
+    outline: none;
+    background-color: var(--bg-input-field);
+    color: var(--fc-title-input);
+    font-size: var(--fs-input-field);
+    line-height: var(--lh-input-field);
+    font-weight: var(--fw-regular);
+  }
 
-    .input-field.is-invalid {
-        border-color: var(--bg-border-input-error);
-    }
+  .input-field:-webkit-autofill,
+  .input-field:-webkit-autofill:hover,
+  .input-field:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 62.5rem var(--bg-input) inset;
+    -webkit-text-fill-color: var(--fc-title-input);
+  }
 
-    .error-message {
-        color: var(--fc-error-message);
-        font-size: var(--fs-error-message);
-        line-height: var(--lh-error-message);
-        font-weight: var(--fw-regular);
-    }
+  .input-field:focus {
+    border-color: var(--bg-border-input-focus);
+  }
 
-    .size-message {
-        min-block-size: var(--sizing-message);
-    }
+  .input-field.is-invalid {
+    border-color: var(--bg-border-input-error);
+  }
 
+  .error-message {
+    color: var(--fc-error-message);
+    font-size: var(--fs-error-message);
+    line-height: var(--lh-error-message);
+    font-weight: var(--fw-regular);
+  }
+
+  .size-message {
+    min-block-size: var(--sizing-message);
+  }
 }

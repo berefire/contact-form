@@ -40,7 +40,7 @@
               </label>
               <input type="text" id="first-name" name="first-name" aria-describedby="desc_name"
                 autocomplete="given-name" class="input-field" required>
-              <span id="desc_name" class="error-message" hidden></span>
+              <span id="desc_name" class="error-message" hidden role="alert"></span>
             </div>
 
             <div class="cluster--xs">
@@ -49,7 +49,7 @@
               </label>
               <input type="text" id="last-name" name="last-name" aria-describedby="desc_last-name"
                 autocomplete="family-name" class="input-field" required>
-              <span id="desc_last-name" class="error-message" hidden></span>
+              <span id="desc_last-name" class="error-message" hidden role="alert"></span>
             </div>
           </div>
 
@@ -57,9 +57,9 @@
             <label for="email" class="title-input">Email Address
               <span class="required" aria-hidden="true">*</span>
             </label>
-            <input type="email" id="email" name="email" aria-describedby="desc_email error_email" autocomplete="email"
+            <input type="email" id="email" name="email" aria-describedby="error_email" autocomplete="email"
               class="input-field" required>
-            <span id="error_email" class="error-message" hidden></span>
+            <span id="error_email" class="error-message" hidden role="alert"></span>
           </div>
 
           <div class="cluster--xs">
@@ -73,7 +73,7 @@
                     id="support-request" name="query-type" value="support-request" class="radio-icon"
                     aria-describedby="desc_query-type" required>Support Request</span></label>
             </fieldset>
-            <span id="desc_query-type" class="error-message" hidden></span>
+            <span id="desc_query-type" class="error-message" hidden role="alert"></span>
           </div>
 
 
@@ -83,29 +83,33 @@
             </label>
             <textarea id="message" name="message" aria-describedby="desc_message" required
               class="input-field size-message"></textarea>
-            <span id="desc_message" class="error-message" hidden></span>
+            <span id="desc_message" class="error-message" hidden role="alert"></span>
           </div>
         </div>
       </div>
 
       <div class="cluster--xs">
         <label for="consent" class="checkbox-label">
-            <input type="checkbox" id="consent" name="consent" aria-describedby="desc_consent" required
-              class="checkbox-input"><span class="text-checkbox">I consent to being contacted by the team <span class="required" aria-hidden="true">*</span></span>
-            
-        </label>
-        <span id="desc_consent" class="error-message" hidden></span>
-      </div>
+          <input type="checkbox" id="consent" name="consent" aria-describedby="desc_consent" required
+            class="checkbox-input"><span class="text-checkbox">I consent to being contacted by the team <span
+              class="required" aria-hidden="true">*</span></span>
 
+        </label>
+        <span id="desc_consent" class="error-message" hidden role="alert"></span>
+      </div>
 
       <button type="submit" class="submit-btn">Submit</button>
 
     </form>
 
 
-    <section aria-labelledby="message-sent-title" hidden tabindex="-1" role="status" aria-live="polite">
-      <h2 id="message-sent-title">Message Sent!</h2>
-      <p>Thanks for completing the form. We'll be in touch soon!</p>
+    <section aria-labelledby="message-sent-title" role="status" aria-live="polite" class="message-section cluster--xs box--md" hidden>
+      <div class="cluster">
+        <span class="icon-circle" aria-hidden="true"></span>
+        <h2 id="message-sent-title" class="title-message">Message Sent!</h2>
+      </div>
+
+      <p class="text-message">Thanks for completing the form. We'll be in touch soon!</p>
     </section>
   </main>
 
