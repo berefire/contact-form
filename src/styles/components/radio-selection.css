@@ -38,6 +38,7 @@
         font-size: var(--fs-radio-option);
         color: var(--fc-radio-option);
         line-height: var(--lh-radio-option);
+        font-weight: var(--fw-regular);
     }
 
 

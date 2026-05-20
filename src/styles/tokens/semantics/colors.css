@@ -4,6 +4,8 @@
         --bg-primary: var(--green-200);
         --bg-contact-form: var(--white);
         --bg-input: var(--white);
+        --bg-submit-btn: var(--green-600);
+        
 
         --bg-border-input: var(--grey-500);
         --bg-border-input-hover: var(--green-600);
@@ -16,6 +18,8 @@
         --fc-title: var(--grey-900);
         --fc-title-input: var(--grey-900);
         --fc-radio-option: var(--grey-900);
+        --fc-checkbox: var(--grey-900);
+        --fc-submit-btn: var(--white);
 
         --fc-required: var(--green-600);
         --fc-error-message: var(--red);

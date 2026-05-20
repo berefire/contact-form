@@ -1,0 +1,6 @@
+@layer states {
+    .checkbox-input:checked {
+        background-image: url("../../assets/images/icon-checkbox-check.svg");
+        border: none;
+    }
+}

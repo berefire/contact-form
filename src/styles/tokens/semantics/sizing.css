@@ -2,5 +2,6 @@
     :root {
         --sizing-contact-form: var(--sizing-343);
         --sizing-radio: var(--sizing-24);
+        --sizing-checkbox: var(--sizing-24);
     }
 }

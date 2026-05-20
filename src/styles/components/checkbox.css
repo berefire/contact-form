@@ -1,0 +1,28 @@
+@layer components {
+    .checkbox-input {
+        border: 0.0625em solid var(--bg-border-input);
+        inline-size: var(--sizing-checkbox);
+        block-size: var(--sizing-checkbox);
+
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+
+    .checkbox-label {
+        display: inline-flex;
+        flex-direction: row;
+        align-items: center;
+        gap: var(--gap-checkbox);
+
+        cursor: pointer;
+    }
+
+    .text-checkbox {
+        max-inline-size: 25ch;
+        font-size: var(--fs-checkbox);
+        color: var(--fc-checkbox);
+        line-height: var(--lh-checkbox);
+        font-weight: var(--fw-regular);
+    }
+}

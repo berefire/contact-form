@@ -66,11 +66,13 @@
           <div class="cluster--xs">
             <fieldset class="radio-selection">
               <legend class="title-input">Query Type <span class="required" aria-hidden="true">*</span></legend>
-            
-              <label for="general-enquiry" class="radio-text"><span class="radio-option--visual"><input type="radio" id="general-enquiry" name="query-type" value="general-enquiry" class="radio-icon"
-                aria-describedby="desc_query-type" required>General Enquiry</span></label>
-              <label for="support-request" class="radio-text"><span class="radio-option--visual"><input type="radio" id="support-request" name="query-type" value="support-request" class="radio-icon"
-                aria-describedby="desc_query-type" required>Support Request</span></label>
+
+              <label for="general-enquiry" class="radio-text"><span class="radio-option--visual"><input type="radio"
+                    id="general-enquiry" name="query-type" value="general-enquiry" class="radio-icon"
+                    aria-describedby="desc_query-type" required>General Enquiry</span></label>
+              <label for="support-request" class="radio-text"><span class="radio-option--visual"><input type="radio"
+                    id="support-request" name="query-type" value="support-request" class="radio-icon"
+                    aria-describedby="desc_query-type" required>Support Request</span></label>
             </fieldset>
             <span id="desc_query-type" class="error-message">Please select a query type</span>
           </div>
@@ -80,7 +82,7 @@
             <label for="message" class="title-input">Message
               <span class="required" aria-hidden="true">*</span>
             </label>
-            <textarea id="message" name="message" rows="5" aria-describedby="desc_message" required
+            <textarea id="message" name="message" rows="8" aria-describedby="desc_message" required
               class="input-field"></textarea>
             <span id="desc_message" class="error-message">This field is required</span>
           </div>
@@ -89,17 +91,15 @@
 
       <div class="cluster--xs">
         <label for="consent" class="checkbox-label">
-          <input type="checkbox" id="consent" name="consent" aria-describedby="desc_consent" required
-            class="checkbox-input">
-          I consent to being contacted by the team <span>
-            <span class="required" aria-hidden="true">*</span>
-          </span>
+            <input type="checkbox" id="consent" name="consent" aria-describedby="desc_consent" required
+              class="checkbox-input"><span class="text-checkbox">I consent to being contacted by the team <span class="required" aria-hidden="true">*</span></span>
+            
         </label>
         <span id="desc_consent" class="error-message">To submit this form, please consent to being contacted</span>
       </div>
 
 
-      <button type="submit">Submit</button>
+      <button type="submit" class="submit-btn">Submit</button>
 
     </form>
 

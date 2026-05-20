@@ -1,0 +1,15 @@
+@layer components {
+    .submit-btn {
+        background-color: var(--bg-submit-btn);
+        inline-size: 100%;
+        padding-inline: var(--padding-inline-submit-btn);
+        padding-block: var(--padding-block-submit-btn);
+        border-radius: var(--spacing-100);
+
+        color: var(--fc-submit-btn);
+        line-height: var(--lh-submit-btn);
+        font-size: var(--fs-submit-btn);
+        font-weight: var(--fw-bold);
+    }
+
+}

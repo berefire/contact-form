@@ -15,6 +15,7 @@
         color: var(--fc-error-message);
         font-size: var(--fs-error-message);
         line-height: var(--lh-error-message);
+        font-weight: var(--fw-regular);
     }
 
     .input-field {
@@ -27,6 +28,7 @@
         color: var(--fc-title-input);
         font-size: var(--fs-input-field);
         line-height: var(--lh-input-field);
+        font-weight: var(--fw-regular);
     }
 
 }

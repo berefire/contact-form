@@ -1,0 +1,5 @@
+@layer states {
+    .submit-btn:hover {
+        background-color: color-mix(in srgb, black 50%, var(--bg-submit-btn));
+    }
+}
