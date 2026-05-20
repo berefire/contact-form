@@ -3,12 +3,15 @@
         --sizing-contact-form: var(--sizing-343);
         --sizing-radio: var(--sizing-24);
         --sizing-checkbox: var(--sizing-24);
+        --sizing-icon-circle: var(--sizing-24);
         --sizing-message: var(--sizing-240);
+        --sizing-message-section: var(--sizing-327);
     }
 
     @media(min-width: 48em){
         :root {
             --sizing-contact-form: var(--sizing-690);
+            --sizing-message-section: var(--sizing-450);
             --sizing-message: var(--sizing-132);
         }
     }

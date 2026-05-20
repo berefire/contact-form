@@ -10,6 +10,9 @@
         --fs-radio-option: var(--fs-body-md);
         --fs-input-field: var(--fs-body-md);
         --fs-submit-btn: var(--fs-body-md);
+        --fs-title-message-sent: var(--fs-body-md);
+        --fs-body-message-sent: var(--fs-body-sm);
+
 
         --lh-title-input: var(--lh-body);
         --lh-error-message: var(--lh-body);
@@ -18,6 +21,8 @@
         --lh-input-field: var(--lh-body);
         --lh-submit-btn: var(--lh-body);
         --lh-checkbox: var(--lh-body);
+        --lh-title-message-sent: var(--lh-body);
+        --lh-body-message-sent: var(--lh-body);
 
         --fw-regular: var(--font-weight-regular);
         --fw-bold: var(--font-weight-bold);
