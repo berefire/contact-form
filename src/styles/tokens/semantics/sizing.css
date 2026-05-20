@@ -1,7 +1,22 @@
-@layer tokens.semantics{
+@layer tokens.semantics {
     :root {
         --sizing-contact-form: var(--sizing-343);
         --sizing-radio: var(--sizing-24);
         --sizing-checkbox: var(--sizing-24);
+        --sizing-message: var(--sizing-240);
+    }
+
+    @media(min-width: 48em){
+        :root {
+            --sizing-contact-form: var(--sizing-690);
+            --sizing-message: var(--sizing-132);
+        }
+    }
+
+    @media(min-width: 64em){
+        :root {
+            --sizing-contact-form: var(--sizing-736);
+            --sizing-message: var(--sizing-105);
+        }
     }
 }

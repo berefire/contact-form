@@ -35,6 +35,7 @@
     }
 
     .radio-text {
+        flex: 1;
         font-size: var(--fs-radio-option);
         color: var(--fc-radio-option);
         line-height: var(--lh-radio-option);
@@ -45,6 +46,12 @@
 
     .radio-selection .title-input {
         padding-block-end: var(--gap-radio-selection);
+    }
+
+    @media(min-width: 48em){
+        .radio-selection {
+            flex-direction: row;
+        }
     }
 
     

@@ -35,4 +35,8 @@
         font-weight: var(--fw-regular);
     }
 
+    .size-message {
+        min-block-size: var(--sizing-message);
+    }
+
 }

@@ -25,4 +25,10 @@
         line-height: var(--lh-checkbox);
         font-weight: var(--fw-regular);
     }
+
+    @media(min-width: 48em){
+        .text-checkbox {
+            max-inline-size: 33ch;
+        }
+    }
 }

@@ -23,4 +23,13 @@
         --gap-radio-option: var(--spacing-150);
         --gap-checkbox: var(--spacing-150);
     }
+
+    @media(min-width: 48em){
+        :root {
+            --margin-block-contact-form: var(--spacing-1600);
+
+            --padding-inline-box: var(--spacing-500);
+            --padding-block-box: var(--spacing-500);
+        }
+    }
 }
