@@ -1,43 +1,25 @@
 import { TOAST_DURATION, TOAST_TRANSITION } from "./constants.js";
 
 export function showError(inputElement, messageElement, errorMessage) {
-  if (!inputElement) {
-    console.warn("Input element not found for showing error:", inputElement);
+  if (!inputElement || !messageElement) {
     return;
   }
 
   inputElement.classList.add("is-invalid");
   inputElement.setAttribute("aria-invalid", "true");
-
-  if (messageElement) {
-    messageElement.textContent = errorMessage;
-    messageElement.hidden = false;
-  } else {
-    console.warn(
-      "Error message element not found for displaying error:",
-      messageElement,
-    );
-  }
+  messageElement.textContent = errorMessage;
+  messageElement.hidden = false;
 }
 
 export function clearError(inputElement, messageElement) {
-  if (!inputElement) {
-    console.warn("Input element not found for showing error:", inputElement);
+  if (!inputElement || !messageElement) {
     return;
   }
 
   inputElement.classList.remove("is-invalid");
   inputElement.removeAttribute("aria-invalid");
-
-  if (messageElement) {
-    messageElement.textContent = "";
-    messageElement.hidden = true;
-  } else {
-    console.warn(
-      "Error message element not found for clearing error:",
-      messageElement,
-    );
-  }
+  messageElement.textContent = "";
+  messageElement.hidden = true;
 }
 
 export function createToastController() {
