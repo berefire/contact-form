@@ -1,10 +1,9 @@
-import { showError, clearError, showToast } from "./ui.js";
-
+import { showError, clearError} from "./ui.js";
 
 
 /* ================ Event Handlers ================ */
 
-export function handleSubmit(event, formFields, ToastElement){
+export function handleSubmit(event, formFields, toastController, ToastElement){
     
     event.preventDefault();
 
@@ -23,5 +22,5 @@ export function handleSubmit(event, formFields, ToastElement){
 
     if (hasErrors) return;
 
-    showToast(ToastElement);
+    toastController.showToast(ToastElement);
 }

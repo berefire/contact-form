@@ -15,12 +15,22 @@ const selectors = {
     messageToast: ".message-section"
 };
 
+function logWarning(message) {
 
-function assertElement(element, context){
+    if (!DEBUG) return;
+
+    console.warn(message);
+}
+
+
+function assertElement(element, context, required = true) {
     const isEmptyNodeList = ( element instanceof NodeList || element instanceof HTMLCollection) && element.length ===0;
 
     if (!element || isEmptyNodeList) {
-        console.warn(`[DOM] Element not found for ${context}:`, element);
+        if (required) {
+            logWarning(`[DOM] Element not found for ${context}:`, element);
+        }
+        
         return false;
     }
     return true;
