@@ -1,4 +1,4 @@
-import { DEBUG } from "../contact-form/constants.js";
+import { requiredElements} from "../contact-form/constants.js"
 
 const selectors = {
     contactForm: ".contact-form",
@@ -17,32 +17,27 @@ const selectors = {
     messageToast: ".message-section"
 };
 
-function logWarning(message) {
+function assertElement(element) {
+   const isCollection = element instanceof NodeList || element instanceof HTMLCollection;
+   
+   const isEmptyCollection = isCollection && element.length === 0;
 
-    if (!DEBUG) return;
-
-    console.warn(message);
-}
-
-
-function assertElement(element, context, required = true) {
-    const isEmptyNodeList = ( element instanceof NodeList || element instanceof HTMLCollection) && element.length ===0;
-
-    if (!element || isEmptyNodeList) {
-        if (required) {
-            logWarning(`[DOM] Element not found for ${context}:`, element);
-        }
-        
-        return false;
-    }
-    return true;
+   return (!!element && !isEmptyCollection);
 }
 
 
 export function addSafeListener(element, event, handler, context = "unknown") {
-    if (!assertElement(element, context)) {
+    if (!assertElement(element)) {
         return;
     }
+
+    const isCollection = element instanceof NodeList || element instanceof HTMLCollection;
+
+    if (isCollection) {
+        [...element].forEach(item => item.addEventListener(event, handler));
+        return;
+    }
+
     element.addEventListener(event, handler);
 }
 
@@ -65,7 +60,13 @@ export function initDOMElements() {
     };
 
     Object.entries(DOM).forEach(([key, element]) => {
-        assertElement(element, `initializing DOM element: ${key}`);
+        
+        const isRequired = requiredElements.includes(key);
+
+        if( isRequired && !assertElement(element)) {
+            throw new Error(`[DOM] Missing required element: ${key}`);
+        }
+
     });
 
     return Object.freeze(DOM);
