@@ -24,7 +24,7 @@
   <title> Berefire | Frontend Mentor Accessible Contact Form Solution </title>
 
 
-  <script type="module" crossorigin src="/contact-form/assets/index-D36K_3-2.js"></script>
+  <script type="module" crossorigin src="/contact-form/assets/index-BDgDNQJW.js"></script>
   <link rel="stylesheet" crossorigin href="/contact-form/assets/index-DzwHRL4b.css">
 </head>
 
@@ -42,7 +42,7 @@
               </label>
               <input type="text" id="first-name" name="first-name" aria-describedby="desc_name"
                 autocomplete="given-name" class="input-field" required>
-              <span id="desc_name" class="error-message" role="alert"></span>
+              <span id="desc_name" class="error-message" role="alert" hidden></span>
             </div>
 
             <div class="cluster--xs">
@@ -51,7 +51,7 @@
               </label>
               <input type="text" id="last-name" name="last-name" aria-describedby="desc_last-name"
                 autocomplete="family-name" class="input-field" required>
-              <span id="desc_last-name" class="error-message" role="alert"></span>
+              <span id="desc_last-name" class="error-message" role="alert" hidden></span>
             </div>
           </div>
 
@@ -61,7 +61,7 @@
             </label>
             <input type="email" id="email" name="email" aria-describedby="error_email" autocomplete="email"
               class="input-field" required>
-            <span id="error_email" class="error-message" role="alert"></span>
+            <span id="error_email" class="error-message" role="alert" hidden></span>
           </div>
 
           <div class="cluster--xs">
@@ -75,7 +75,7 @@
                     id="support-request" name="query-type" value="support-request" class="radio-icon"
                     aria-describedby="desc_query-type" required>Support Request</span></label>
             </fieldset>
-            <span id="desc_query-type" class="error-message" role="alert"></span>
+            <span id="desc_query-type" class="error-message" role="alert" hidden></span>
           </div>
 
 
@@ -85,7 +85,7 @@
             </label>
             <textarea id="message" name="message" aria-describedby="desc_message" required
               class="input-field size-message"></textarea>
-            <span id="desc_message" class="error-message" role="alert"></span>
+            <span id="desc_message" class="error-message" role="alert" hidden></span>
           </div>
         </div>
       </div>
@@ -97,7 +97,7 @@
               class="required" aria-hidden="true">*</span></span>
 
         </label>
-        <span id="desc_consent" class="error-message" role="alert"></span>
+        <span id="desc_consent" class="error-message" role="alert" hidden></span>
       </div>
 
       <button type="submit" class="submit-btn">Submit</button>
