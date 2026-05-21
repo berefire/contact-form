@@ -10,7 +10,7 @@
     -webkit-text-fill-color: var(--fc-title-input);
   }
 
-  .input-field:focus {
-    border: 0.125em solid var(--bg-border-input-focus);
+  .input-field:focus-visible {
+    outline: 0.125em solid var(--bg-border-input-focus);
   }
 }
