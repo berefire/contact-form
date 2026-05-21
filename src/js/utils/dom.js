@@ -1,3 +1,5 @@
+import { DEBUG } from "../contact-form/constants.js";
+
 const selectors = {
     contactForm: ".contact-form",
     firstNameInputId: "#first-name",
