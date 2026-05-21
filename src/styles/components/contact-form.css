@@ -7,4 +7,10 @@
         background-color: var(--bg-contact-form);
         border-radius: var(--spacing-200);
     }
+
+    .title-form {
+        color: var(--fc-title);
+        font-size: var(--fs-title-form);
+        font-weight: var(--fw-bold);
+    }
 }

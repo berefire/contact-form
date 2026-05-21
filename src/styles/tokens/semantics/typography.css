@@ -3,6 +3,7 @@
 
         --font-family-base: var(--karla-family);
 
+        --fs-title-form: var(--fs-heading);
         --fs-title-input: var(--fs-body-sm);
         --fs-error-message: var(--fs-body-sm);
         --fs-required: var(--fs-body-sm);
