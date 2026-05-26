@@ -14,5 +14,12 @@ export const requiredElements = [
         "messageError",
         "consentCheckbox",
         "consentError",
-        "messageToast"
+        "messageToast",
+        "titleToast",
+        "descriptionToast"
 ];
+
+export const messagesToast = {
+        title: "Message Sent!",
+        description: "Thank you for completing the form. We'll be in touch soon!"
+}

@@ -14,7 +14,10 @@ const selectors = {
     messageError: "#desc_message",
     consentCheckbox: "#consent",
     consentError: "#desc_consent",
-    messageToast: ".message-section"
+    messageToast: ".message-section",
+    titleToast: "#message-sent-title",
+    descriptionToast: ".text-message",
+    announcerElement: "#sr-announcer"
 };
 
 function assertElement(element) {
@@ -56,7 +59,10 @@ export function initDOMElements() {
         messageError: document.querySelector(selectors.messageError),
         consentCheckbox: document.querySelector(selectors.consentCheckbox),
         consentError: document.querySelector(selectors.consentError),
-        messageToast: document.querySelector(selectors.messageToast)
+        messageToast: document.querySelector(selectors.messageToast),
+        titleToast: document.querySelector(selectors.titleToast),
+        descriptionToast: document.querySelector(selectors.descriptionToast),
+        announcerElement: document.querySelector(selectors.announcerElement)
     };
 
     Object.entries(DOM).forEach(([key, element]) => {

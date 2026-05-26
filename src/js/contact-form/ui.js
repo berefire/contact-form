@@ -17,7 +17,7 @@ export function clearError(inputElement, messageElement) {
   }
 
   inputElement.classList.remove("is-invalid");
-  inputElement.removeAttribute("aria-invalid");
+  inputElement.setAttribute("aria-invalid", "false");
   messageElement.textContent = "";
   messageElement.hidden = true;
 }
@@ -25,19 +25,37 @@ export function clearError(inputElement, messageElement) {
 export function createToastController() {
   let timeoutId = null;
 
-  function showToast(toastElement) {
+  function showToast(toastElement, titleElement, descriptionElement, announcerElement, titleToast, descriptionToast) {
     clearTimeout(timeoutId);
-    toastElement.hidden = false;
+if (titleElement) {
+      titleElement.textContent = titleToast;
+    }
+
+    if (descriptionElement) {
+      descriptionElement.textContent = descriptionToast;
+      
+    }
+
+    if (announcerElement) {
+      announcerElement.textContent = "";
+
+      requestAnimationFrame(() => {
+        announcerElement.textContent = `${titleToast} ${descriptionToast}`;
+      });
+    }
+
+    toastElement.classList.remove("is-hidden");
 
     requestAnimationFrame(() => {
       toastElement.classList.add("is-visible");
+      
     });
 
     timeoutId = setTimeout(() => {
       toastElement.classList.remove("is-visible");
 
       setTimeout(() => {
-        toastElement.hidden = true;
+        toastElement.classList.add("is-hidden");
       }, TOAST_TRANSITION);
     }, TOAST_DURATION);
   }
