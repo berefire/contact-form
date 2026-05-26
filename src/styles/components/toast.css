@@ -1,5 +1,5 @@
 @layer components {
-    .message-section {
+    .message-section{
         position: fixed;
         z-index: 3;
         top: var(--top-margin-toast);
@@ -8,17 +8,26 @@
         background-color: var(--bg-message-sent);
         border-radius: var(--spacing-150);
         max-inline-size: var(--sizing-message-section);
-
-        opacity: 0;
-        transform: translateY(1rem);
-        transition:
-            opacity 400ms ease,
-            transform 400ms ease;
+        
     }
+
+    .message-section.is-hidden{
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(1rem);
+        
+    }
+
 
     .message-section.is-visible {
         opacity: 1;
+        visibility: visible;
         transform: translateY(0);
+
+        transition:
+            opacity 400ms ease,
+            transform 400ms ease,
+            visibility 0s linear 400ms;
     }
 
     .title-message {
