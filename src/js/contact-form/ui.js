@@ -1,4 +1,7 @@
-import { TOAST_DURATION, TOAST_TRANSITION } from "./constants.js";
+import {
+  TOAST_DURATION,
+  TOAST_TRANSITION,
+} from "./constants.js";
 
 export function showError(inputElement, messageElement, errorMessage) {
   if (!inputElement || !messageElement) {
@@ -9,7 +12,6 @@ export function showError(inputElement, messageElement, errorMessage) {
   inputElement.classList.add("is-invalid");
   inputElement.setAttribute("aria-invalid", "true");
   messageElement.textContent = errorMessage;
-  
 }
 
 export function clearError(inputElement, messageElement) {
@@ -21,49 +23,55 @@ export function clearError(inputElement, messageElement) {
   inputElement.classList.remove("is-invalid");
   inputElement.removeAttribute("aria-invalid");
   messageElement.textContent = "";
-  
 }
 
-export function createToastController() {
+export function createToastController({
+  toastElement,
+  announcerElement,
+  closeButton,
+}) {
+  if (!toastElement || !announcerElement || !closeButton) {
+    throw new Error("[Toast] Missing required elements.");
+  }
+
   let timeoutId = null;
 
-  function showToast(toastElement, titleElement, descriptionElement, announcerElement, titleText, descriptionText) {
+  const titleElement = toastElement.querySelector(".title-message");
+  const descriptionElement = toastElement.querySelector(".text-message");
+
+  function showToast({title, description}) {
     clearTimeout(timeoutId);
-if (titleElement) {
-      titleElement.textContent = titleText;
-    }
 
-    if (descriptionElement) {
-      descriptionElement.textContent = descriptionText;
-      
-    }
+    titleElement.textContent = title;
+    descriptionElement.textContent = description;
 
-    if (announcerElement) {
-      announcerElement.textContent = "";
+    announcerElement.textContent = "";
 
-      requestAnimationFrame(() => {
-        announcerElement.textContent = `${titleText} ${descriptionText}`;
-      });
-    }
+    requestAnimationFrame(() => {
+      announcerElement.textContent = `${title} ${description}`;
+    });
 
     toastElement.classList.remove("is-hidden");
 
     requestAnimationFrame(() => {
       toastElement.classList.add("is-visible");
-      toastElement.focus();
-      
+      closeButton?.focus();
     });
 
     timeoutId = setTimeout(() => {
-      toastElement.classList.remove("is-visible");
-
-      setTimeout(() => {
-        toastElement.classList.add("is-hidden");
-      }, TOAST_TRANSITION);
+      hideToast();
     }, TOAST_DURATION);
+  }
+
+  function hideToast() {
+    toastElement.classList.remove("is-visible");
+    setTimeout(() => {
+      toastElement.classList.add("is-hidden");
+    }, TOAST_TRANSITION);
   }
 
   return {
     showToast,
+    hideToast,
   };
 }
