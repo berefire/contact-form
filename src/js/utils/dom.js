@@ -21,11 +21,18 @@ const selectors = {
 };
 
 function assertElement(element) {
-   const isCollection = element instanceof NodeList || element instanceof HTMLCollection;
-   
-   const isEmptyCollection = isCollection && element.length === 0;
+   if (element instanceof Element) {
+    return true;
+  }
 
-   return (!!element && !isEmptyCollection);
+  if (
+    element instanceof NodeList ||
+    element instanceof HTMLCollection
+  ) {
+    return element.length > 0;
+  }
+
+  return false;
 }
 
 

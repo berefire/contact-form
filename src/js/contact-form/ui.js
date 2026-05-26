@@ -5,10 +5,11 @@ export function showError(inputElement, messageElement, errorMessage) {
     return;
   }
 
+  messageElement.hidden = false;
   inputElement.classList.add("is-invalid");
   inputElement.setAttribute("aria-invalid", "true");
   messageElement.textContent = errorMessage;
-  messageElement.hidden = false;
+  
 }
 
 export function clearError(inputElement, messageElement) {
@@ -16,23 +17,24 @@ export function clearError(inputElement, messageElement) {
     return;
   }
 
-  inputElement.classList.remove("is-invalid");
-  inputElement.setAttribute("aria-invalid", "false");
-  messageElement.textContent = "";
   messageElement.hidden = true;
+  inputElement.classList.remove("is-invalid");
+  inputElement.removeAttribute("aria-invalid");
+  messageElement.textContent = "";
+  
 }
 
 export function createToastController() {
   let timeoutId = null;
 
-  function showToast(toastElement, titleElement, descriptionElement, announcerElement, titleToast, descriptionToast) {
+  function showToast(toastElement, titleElement, descriptionElement, announcerElement, titleText, descriptionText) {
     clearTimeout(timeoutId);
 if (titleElement) {
-      titleElement.textContent = titleToast;
+      titleElement.textContent = titleText;
     }
 
     if (descriptionElement) {
-      descriptionElement.textContent = descriptionToast;
+      descriptionElement.textContent = descriptionText;
       
     }
 
@@ -40,7 +42,7 @@ if (titleElement) {
       announcerElement.textContent = "";
 
       requestAnimationFrame(() => {
-        announcerElement.textContent = `${titleToast} ${descriptionToast}`;
+        announcerElement.textContent = `${titleText} ${descriptionText}`;
       });
     }
 
