@@ -12,4 +12,17 @@
         font-weight: var(--fw-bold);
     }
 
+    .toast-close-btn {
+        inline-size: 100%;
+        border: 0.125em solid var(--fc-title-message-sent);
+        border-radius: var(--spacing-100);
+        padding-block: 0.2rem;
+        
+
+        color: var(--fc-title-message-sent);
+        font-size: var(--fs-text-message-sent);
+        line-height: var(--lh-text-message-sent);
+        font-weight: var(--fw-bold);
+    }
+
 }

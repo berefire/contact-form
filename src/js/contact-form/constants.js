@@ -1,5 +1,5 @@
-export const TOAST_DURATION = 3000;
-export const TOAST_TRANSITION = 400;
+export const TOAST_DURATION = 6000;
+export const TOAST_TRANSITION = 8000;
 export const requiredElements = [
         "contactForm",
         "firstNameInput",

@@ -50,6 +50,7 @@ if (titleElement) {
 
     requestAnimationFrame(() => {
       toastElement.classList.add("is-visible");
+      toastElement.focus();
       
     });
 

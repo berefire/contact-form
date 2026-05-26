@@ -25,3 +25,9 @@ export function handleSubmit(event, formFields, toastController, ToastElement, t
 
     toastController.showToast(ToastElement, titleToast, descriptionToast, announcerElement, messagesToast.title, messagesToast.description);
 }
+
+export function handleCloseToast(event, toastElement) {
+    event.preventDefault();
+    toastElement.classList.remove("is-visible");
+    toastElement.classList.add("is-hidden");
+}

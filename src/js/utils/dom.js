@@ -17,7 +17,8 @@ const selectors = {
     messageToast: ".message-section",
     titleToast: "#message-sent-title",
     descriptionToast: ".text-message",
-    announcerElement: "#sr-announcer"
+    announcerElement: "#sr-announcer",
+    closeToastButton: ".toast-close-btn"
 };
 
 function assertElement(element) {
@@ -69,7 +70,8 @@ export function initDOMElements() {
         messageToast: document.querySelector(selectors.messageToast),
         titleToast: document.querySelector(selectors.titleToast),
         descriptionToast: document.querySelector(selectors.descriptionToast),
-        announcerElement: document.querySelector(selectors.announcerElement)
+        announcerElement: document.querySelector(selectors.announcerElement),
+        closeToastButton: document.querySelector(selectors.closeToastButton)
     };
 
     Object.entries(DOM).forEach(([key, element]) => {
