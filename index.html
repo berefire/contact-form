@@ -24,11 +24,12 @@
   <title> Berefire | Frontend Mentor Accessible Contact Form Solution </title>
 
 
-  <script type="module" crossorigin src="/contact-form/assets/index-BPlKpmfm.js"></script>
-  <link rel="stylesheet" crossorigin href="/contact-form/assets/index-Ch7tnjOJ.css">
+  <script type="module" crossorigin src="/contact-form/assets/index-CmlgcInr.js"></script>
+  <link rel="stylesheet" crossorigin href="/contact-form/assets/index-BXE6BTdM.css">
 </head>
 
 <body>
+  <div id="sr-announcer" class="sr-only" aria-live="polite" role="status" aria-atomic="true"></div>
   <main class="cover">
     <form class="contact-form box cluster--lg" novalidate>
       <div class="cluster--md">
@@ -73,7 +74,7 @@
                     aria-describedby="desc_query-type" required>General Enquiry</span></label>
               <label for="support-request" class="radio-text"><span class="radio-option--visual"><input type="radio"
                     id="support-request" name="query-type" value="support-request" class="radio-icon"
-                    aria-describedby="desc_query-type" required>Support Request</span></label>
+                    aria-describedby="desc_query-type">Support Request</span></label>
             </fieldset>
             <span id="desc_query-type" class="error-message" role="alert" hidden></span>
           </div>
@@ -105,13 +106,13 @@
     </form>
 
 
-    <section aria-labelledby="message-sent-title" class="message-section cluster--xs box--md is-hidden">
+    <section class="message-section cluster--xs box--md is-hidden" aria-hidden="true">
       <div class="cluster">
         <span class="icon-circle" aria-hidden="true"></span>
-        <h2 id="message-sent-title" class="title-message">Message Sent!</h2>
+        <h2 id="message-sent-title" class="title-message"></h2>
       </div>
 
-      <p class="text-message">Thanks for completing the form. We'll be in touch soon!</p>
+      <p class="text-message"></p>
     </section>
   </main>
 
@@ -122,6 +123,7 @@
     Coded by <a class="link" target="_blank" rel="noopener noreferrer" aria-label="Author (opens in a new tab)"
       href="#">Berefire</a>.
   </footer>
+
 </body>
 
 </html>
