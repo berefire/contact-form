@@ -1,7 +1,7 @@
 @layer states {
   .toast-close-btn:focus {
     box-shadow:
-      0 0 0 0.25em white,
-      0 0 0 0.5em rgb(12 125 105 / 0.6);
+      0 0 0 0.02em white,
+      0 0 0 0.2em rgb(12 125 105 / 0.6);
   }
 }
